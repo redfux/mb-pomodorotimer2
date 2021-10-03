@@ -1,8 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    timer = 0
-    basic.clearScreen()
-    basic.showString("GO")
-    basic.clearScreen()
+    control.reset()
 })
 input.onButtonPressed(Button.B, function () {
     pause2 = timer
