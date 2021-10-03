@@ -16,6 +16,7 @@ timer = 0
 pause2 = 0
 basic.showString("GO")
 basic.forever(function () {
+    basic.clearScreen()
     timer += 1
     if (timer <= 25) {
         led.plotBarGraph(
