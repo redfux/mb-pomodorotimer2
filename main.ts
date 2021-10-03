@@ -6,7 +6,6 @@ input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
     basic.showIcon(IconNames.No)
     basic.pause(120000)
-    basic.clearScreen()
     timer = pause2
 })
 let pause2 = 0
