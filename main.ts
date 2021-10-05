@@ -6,7 +6,7 @@ input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.No)
 })
 let effektivitaet = 0
-let counter = 0
+let Index = 0
 let timer = 0
 let unterbrechung = 0
 basic.showString("GO")
@@ -33,10 +33,9 @@ basic.forever(function () {
             }
         }
     }
-    for (let counter = 0; counter <= 60; counter++) {
-        counter += 1
+    for (let Index = 0; Index <= 60; Index++) {
         basic.pause(1000)
     }
-    counter = 0
+    Index = 0
     timer += 1
 })
