@@ -9,7 +9,6 @@ input.onButtonPressed(Button.B, function () {
 })
 let effektivitaet = 0
 let timer = 0
-let pause2 = 0
 let unterbrechung = 0
 basic.showString("GO")
 basic.forever(function () {
