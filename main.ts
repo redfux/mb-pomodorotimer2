@@ -5,6 +5,7 @@ input.onButtonPressed(Button.B, function () {
     unterbrechung += 1
     basic.showIcon(IconNames.No)
     basic.pause(30000)
+    basic.clearScreen()
 })
 let effektivitaet = 0
 let timer = 0
@@ -20,7 +21,7 @@ basic.forever(function () {
         )
     } else {
         basic.clearScreen()
-        effektivitaet = 100 - unterbrechung / 0.25
+        effektivitaet = 100 - unterbrechung / 0.125
         for (let index = 0; index < 3; index++) {
             if (effektivitaet == 100) {
                 basic.clearScreen()
