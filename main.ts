@@ -2,20 +2,17 @@ input.onButtonPressed(Button.A, function () {
     control.reset()
 })
 input.onButtonPressed(Button.B, function () {
-    pause2 = timer
-    basic.clearScreen()
+    unterbrechung += 1
     basic.showIcon(IconNames.No)
-    basic.pause(120000)
-    timer = pause2
+    basic.pause(30000)
 })
-let pause2 = 0
+let effektivitaet = 0
 let timer = 0
-timer = 0
-pause2 = 0
+let pause2 = 0
+let unterbrechung = 0
 basic.showString("GO")
 basic.forever(function () {
     basic.clearScreen()
-    timer += 1
     if (timer <= 25) {
         led.plotBarGraph(
         timer,
@@ -23,11 +20,20 @@ basic.forever(function () {
         )
     } else {
         basic.clearScreen()
+        effektivitaet = 100 - unterbrechung / 0.25
         for (let index = 0; index < 3; index++) {
-            basic.clearScreen()
-            basic.showIcon(IconNames.Yes)
-            basic.pause(100)
+            if (effektivitaet == 100) {
+                basic.clearScreen()
+                basic.showIcon(IconNames.Yes)
+                basic.pause(100)
+            } else {
+                basic.clearScreen()
+                basic.showString("" + effektivitaet + "%")
+                basic.showIcon(IconNames.Sad)
+                basic.pause(100)
+            }
         }
     }
     basic.pause(60000)
+    timer += 1
 })
