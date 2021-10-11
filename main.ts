@@ -19,7 +19,7 @@ basic.forever(function () {
         )
     } else {
         basic.clearScreen()
-        effektivitaet = 100 - unterbrechung / 0.125
+        effektivitaet = 100 - unterbrechung / 0.25
         for (let index = 0; index < 3; index++) {
             if (effektivitaet == 100) {
                 basic.clearScreen()
