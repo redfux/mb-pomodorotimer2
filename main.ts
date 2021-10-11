@@ -4,12 +4,10 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     unterbrechung += 1
     basic.showIcon(IconNames.No)
-    basic.pause(30000)
-    basic.clearScreen()
 })
 let effektivitaet = 0
+let Index = 0
 let timer = 0
-let pause2 = 0
 let unterbrechung = 0
 basic.showString("GO")
 basic.forever(function () {
@@ -35,6 +33,9 @@ basic.forever(function () {
             }
         }
     }
-    basic.pause(60000)
+    for (let Index = 0; Index <= 60; Index++) {
+        basic.pause(1000)
+    }
+    Index = 0
     timer += 1
 })
